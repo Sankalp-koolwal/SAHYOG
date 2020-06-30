@@ -1,0 +1,242 @@
+<%- include('partials/header'); -%>
+
+<div class = "container">
+	<div class = "row mt-5">
+		<div style = "width: 100%;">
+			<div class = "information">
+				<h1>REPORT MISSING PEOPLE</h1>
+			</div>
+		</div>
+
+		<div style = "width: 100%;">
+			<div class = "information">
+				<h4>Please fill out this form</h4>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row d-flex justify-content-center" style="margin-bottom: 20px;">
+			<div class="col-md-9 border border-primary">
+
+				<!-- note -->
+				<div class="bg-info mt-3 mb-3" style="padding: 10px;">NOTE : Please try to provide us with unique identification details such as emailID and contact number of the missing person so that the finding process is easier.</div>
+
+				<!-- FORM start -->
+				<form action="/reportMissing" method="post" class="needs-validation" novalidate>
+
+					<!-- info -->
+					<div class="border"><i class="fa fa-info-circle" aria-hidden="true"></i>
+						Please first enter the details of the reporting person i.e. your details
+					</div><br>
+
+				<!-- FORM FOR REPORTING PERSON DETAILS
+					============================================= -->
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label for="validationCustom01">Full Name*</label>
+							<input type="text" class="form-control" name="r_name" placeholder="Full Name" required>
+							<div class="invalid-feedback">
+								Please provide a name.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label for="validationCustom03">Permanant Address*</label>
+							<input type="text" class="form-control" name="r_address" placeholder="Address" required>
+							<div class="invalid-feedback">
+								Please provide a valid address.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label>Postal Code*</label>
+							<input type="number" class="form-control" name="r_zip" placeholder="Postal Code" required>
+							<div class="invalid-feedback">
+								Please provide a valid zip.
+							</div>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label>Contact Number*</label>
+							<input type="number" class="form-control" name="r_contact1" placeholder="919611582354" maxlength="12" required>
+							<div class="invalid-feedback">
+								Please provide a valid contact number.
+							</div>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label>Alternate Contact Number</label>
+							<input type="number" class="form-control" name="r_contact2" placeholder="Phone">
+							<div class="invalid-feedback">
+								Please provide a valid contact number.
+							</div>
+						</div>
+					</div>
+					<div class="form-row mb-3">
+						<div class="col-md-6 mb-3">
+							<label>Email ID</label>
+							<input type="email" class="form-control" name="r_email" placeholder="Email">
+							<div class="invalid-feedback">
+								Please provide a valid email ID.
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label>Relation with missing person*</label>
+							<select id="r_relation" name="r_relation" class="custom-select" required>
+								<option selected disabled="true">Open this select menu</option>
+								<option value="parent">Parent</option>
+								<option value="child">Child</option>
+								<option value="sibling">Siblings</option>
+								<option value="relative">Relative</option>
+								<option value="friend/aquaintance">Friend/Aquaintance</option>
+							</select>
+							<div class="invalid-feedback">
+								Please provide a valid state.
+							</div>
+						</div>
+					</div>
+					<!-- =================REPROTING DETAILS END==========================-->
+
+				<!--FORM FOR MISSING PERSON DETAILS
+					=================================================== -->
+					<div class="border"><i class="fa fa-info-circle" aria-hidden="true"></i>
+						Please enter the details of the missing person
+					</div><br>
+
+
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label>Full Name*</label>
+							<input type="text" class="form-control" name="m_name" placeholder="Full Name" required>
+							<div class="invalid-feedback">
+								Please provide the name.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label>Permanant Address*</label>
+							<input type="text" class="form-control" name="m_address" placeholder="Address" required>
+							<div class="invalid-feedback">
+								Please provide a valid address.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label>City*</label>
+							<input type="text" class="form-control" name="m_city" placeholder="City" required>
+							<div class="invalid-feedback">
+								Please provide a valid city.
+							</div>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label>State*</label>
+							<input type="text" class="form-control" name="m_state" placeholder="State" required>
+							<div class="invalid-feedback">
+								Please provide a valid state.
+							</div>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label>Postal Code*</label>
+							<input type="number" class="form-control" name="m_zip" placeholder="Postal Code" required>
+							<div class="invalid-feedback">
+								Please provide a valid zip.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Contact Number*</label>
+							<input type="number" class="form-control" name="m_contact" placeholder="Phone" required>
+							<div class="invalid-feedback">
+								Please provide a valid contact number.
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label>Gender*</label>
+							<select id="m_gender" name="m_gender" class="custom-select" required>
+								<option selected disabled="true">Open this select menu</option>
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+								<option value="Other">Other</option>
+							</select>
+							<div class="invalid-feedback">
+								Please choose an option.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Age</label>
+							<input type="number" class="form-control" name="m_age" placeholder="Age" required>
+							<div class="invalid-feedback">
+								Please provide a valid age.
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label>Email ID</label>
+							<input type="email" class="form-control" name="m_email" placeholder="Email">
+							<div class="invalid-feedback">
+								Please provide a valid email ID.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Last known location</label>
+							<input type="text" class="form-control" name="m_location" placeholder="Last known location" value="NA">
+							<div class="invalid-feedback">
+								Please provide a valid location.
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label>Date since missing</label>
+							<input type="date" class="form-control" name="m_date" required>
+							<div class="invalid-feedback">
+								Please provide a valid date.
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<p class = "mb-2">Missing Person's Image(Optional)</p>
+							<input type="text" class="form-control" name="m_photo" placeholder="Image URL" required>
+							<div class="invalid-feedback">
+								Please provide image url of the person you are reporting. 
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Time since missing<small>(eg. 2:38 PM)</small></label>
+							<input type="time" class="form-control" name="m_time" required>
+							<div class="invalid-feedback">
+								Please provide a valid time.
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<p class = "mb-2">Description(dress or facial)</p>
+							<textarea placeholder="Last known location" value="NA" name="m_description" style="width: 100%;"></textarea>
+							<div class="invalid-feedback">
+								Please provide a valid descripton.
+							</div>
+						</div>
+					</div>
+					<!-- ================MISSING DETAILS END=========================== -->
+
+
+					<button class="btn btn-primary btn-block bg-info mb-3" type="submit">Submit form</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- ===============FORM END=================== -->
+	</div>
+
+</div>
+
+<%- include('partials/footer'); -%>

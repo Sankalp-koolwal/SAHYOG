@@ -1,0 +1,62 @@
+<%- include('partials/header'); -%>
+
+<div class = "main">
+
+<div class = "container" style="margin-top: 5%; margin-bottom: 6%;">
+	<div class = "row mt-5">
+		<div style = "width: 100%;">
+			<div class = "information">
+				<h1>CANCEL REPORT</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row d-flex justify-content-center" style="margin-bottom: 20px;">
+			<div class="col-md-9 border border-primary">
+
+				<!-- note -->
+				<div class="bg-info mb-3 mt-3" style="padding: 10px;">NOTE : Use your reference ID provided to you during reporting to cancel your report request.</div>
+
+				<!-- FORM start -->
+				<form action="/cancelReport" method="post" class="needs-validation" novalidate>
+
+
+				<!-- FORM FOR CANCELLING REPORT
+					============================================= -->
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label>Enter Reference ID*</label>
+							<input type="text" class="form-control" name="cancel_ID" placeholder="contactnumber@xyz" required>
+							<div class="invalid-feedback">
+								Please provide an ID.
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Choose Cancel Type</label>
+							<select id="cancel_type" name="cancel_type" class="custom-select" required>
+								<option selected disabled="true">Open this select menu</option>
+								<option value="found">Found</option>
+								<option value="missing">Missing</option>
+							</select>
+							<div class="invalid-feedback">
+								Please provide a valid state.
+							</div>
+						</div>
+					</div>
+
+					<!-- ================END=========================== -->
+
+
+					<button class="btn btn-primary btn-block bg-info mb-3" type="submit">Submit form</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- ===============FORM END=================== -->
+</div>
+
+</div>
+
+<%- include('partials/footer'); -%>

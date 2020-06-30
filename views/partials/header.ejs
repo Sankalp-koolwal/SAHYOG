@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SAHYOG</title>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <base href="/">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+		  	<a class="navbar-brand" href="/">SAHYOG</a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<div class="collapse navbar-collapse" id="navbarNav" style="padding-right: 8%;font-size: 22px;">
+		    	<ul class="navbar-nav ml-auto">
+		      		<li class="nav-item active">
+		        	<a class="nav-link" href="/">Home</a>
+			      	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="/report">Report</a>
+			      	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="/find">Find</a>
+			      	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="/guide">Guide</a>
+			      	</li>
+			      	
+		    	</ul>
+		  	</div>
+		</nav>
+
+		<div class = "container pt-5">
+			<% if(error_message  && error_message.length > 0) { %>
+				<div class = "alert alert-danger" role = "alert"> <%= error_message %></div>
+			<% } %>
+		</div>
+
+		<div class = "container">
+			<% if(success_message && success_message.length > 0) { %>
+				<div class = "alert alert-success" role = "alert"> <%= success_message %></div>
+			<% } %>
+		</div>
+
+
+
+

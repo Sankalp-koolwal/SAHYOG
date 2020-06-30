@@ -1,0 +1,44 @@
+<%- include('partials/header'); -%>
+
+<div class = "main">
+
+<div class="container mt-5">
+
+    <div class = "row mb-5 justify-content-center">
+        <div>
+            <div class = "col-md-3">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>FIND PEOPLE MISSING</strong></h5>
+                        <hr>
+                        <p class="card-text">Find the people who are reported as missing by someone and inform them if you found the missing person.</p>
+                        <a href="/findMissing" class="btn btn-primary btn-block">Report Missing</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class = "row mb-5 justify-content-center">
+        <div>
+            <div class = "col-md-3">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>FIND PEOPLE FOUND</strong></h5>
+                        <hr>
+                        <p class="card-text">Find your friends and family who are reported as found by someone and try to reach out to them for more information regarding them.</p>
+                        <a href="/findFound" class="btn btn-primary btn-block">Find Found</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info information mb-5" role="alert">
+        NOTE: Please do search these lists before reporting anyone missing for convinience.    
+    </div>
+
+</div>
+</div>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,121 @@
+<%- include('partials/header'); -%>
+
+<div class = "main">
+
+	<div class="container" style="margin-bottom: 3%; margin-top: 4%;">
+
+		<div class="information">
+				<h1>MISSING</h1>
+		</div>
+
+		<div class = "row mb-3">
+			<div class = "col-md-7 mb-3">
+				<div class="card" style="width: 100%;">
+
+				   	<h5 class = "card-header"><strong>MISSING PERSON DETAILS</strong></h5>
+
+					<% if(profile_missing.missing_photo != " ") {%>
+						<img class="card-img-top" src="<%= profile_missing.missing_photo %>">
+					<% } %>
+
+				   	<div class="card-body" style="text-align: left;">
+
+						<div>
+							<span class = "more_info">Name :</span> 
+							<p class = "more_info_deep">
+								<%=profile_missing.missing_name %>
+							</p>
+						</div>
+
+
+
+						<div> <span class = "more_info">Contact : </span><p  class = "more_info_deep"><%=profile_missing.missing_contact %></p></div>
+
+						<div> <span class = "more_info">Address : </span><p  class = "more_info_deep"><%=profile_missing.missing_address %></p></div>
+
+						<div> <span class = "more_info">Place : </span><p  class = "more_info_deep"><%=profile_missing.missing_city %> <%=profile_missing.missing_state %> <%=profile_missing.missing_pincode %></p></div>
+
+						<div> <span class = "more_info">Descripton : </span><p  class = "more_info_deep"><%=profile_missing.missing_description %></p></div>
+
+						<div> 
+							<span class = "more_info">Missing Since : </span>
+							<p  class = "more_info_deep">
+								<%=profile_missing.missing_date %> 
+								<%=profile_missing.missing_time %>
+							</p>
+						</div>
+
+						<div> <span class = "more_info">Last known Location : </span><p  class = "more_info_deep"><%=profile_missing.missing_location %></p></div>
+
+						<div> <span class = "more_info">Age : </span><p  class = "more_info_deep"><%=profile_missing.missing_age %></p></div>
+
+						<div> <span class = "more_info">Gender : </span><p class = "more_info_deep"><%=profile_missing.missing_gender %></p></div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class = "col-md-5 mb-3">
+				<div class="card" style="width: 100%;">
+					<h5 class = "card-header"><strong>REPORTING PERSON DETAILS</strong></h5>
+
+				   	<div class="card-body" style="text-align: left;">
+
+						<div>
+							<span class = "more_info">Name :</span> 
+							<p class = "more_info_deep">
+								<%=profile_missing.reporter_name %>
+							</p>
+						</div>
+
+						<div> 
+							<span class = "more_info">Contact : </span>
+							<p class = "more_info_deep">
+								<%=profile_missing.reporter_contact1 %>
+							</p>
+						</div>
+
+						<div> 
+							<span class = "more_info">Address : </span>
+							<p class = "more_info_deep">
+								<%=profile_missing.reporter_address %>
+							</p>
+						</div>
+
+						<div> 
+							<span class = "more_info">Pin Code : </span>
+							<p  class = "more_info_deep">
+								<%=profile_missing.reporter_pincode %>
+							</p>
+						</div>
+
+						<div> 
+							<span class = "more_info">Relation : </span>
+							<p  class = "more_info_deep">
+								<%=profile_missing.reporter_relation %>
+							</p>
+						</div>
+
+						<div> 
+							<span class = "more_info">Mail ID : </span>
+							<p  class = "more_info_deep">
+								<%=profile_missing.reporter_email %>
+							</p>
+						</div>
+
+				  	</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+		<a class = "btn btn-primary" href="/findMissing">Go Back.</a>
+
+	</div>
+
+</div>
+
+<%- include('partials/footer'); -%>

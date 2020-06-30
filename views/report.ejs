@@ -1,0 +1,59 @@
+<%- include('partials/header'); -%>
+
+<div class = "main">
+
+<div class="container mt-5">
+
+    <div class = "row justify-content-center">
+        <div>
+            <div class = "col-md-3 mb-5">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>REPORT MISSING PEOPLE</strong></h5>
+                        <hr>
+                        <p class="card-text">Report your friends and family members who are missing.</p>
+                        <a href="/reportMissing" class="btn btn-primary btn-block">Report Missing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class = "col-md-3 mb-5">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>REPORT FOUND PEOPLE</strong></h5>
+                        <hr>
+                        <p class="card-text">Report people around you and who are not able to reach out their family and friends.</p>
+                        <a href="/reportFound" class="btn btn-primary btn-block">Report Found</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class = "row mb-5 justify-content-center">
+        <div>
+            <div class = "col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>CANCEL REPORT REQUEST</strong></h5>
+                        <hr>
+                        <p class="card-text">If you have found the person you reported as missing, or the person you found has met their aquantaince, then you can cancel the report request.</p>
+                        <a href="/cancel_Report" class="btn btn-primary btn-block">Cancel Report Request</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info information mb-5" role="alert">
+        NOTE: Please do search the already reported people's list before reporting anyone missing for convinience.
+    </div>
+
+</div>
+
+</div>
+
+<%- include('partials/footer'); -%>
+ 
