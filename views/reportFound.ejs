@@ -144,6 +144,16 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<p class = "mb-2">Found Person's Image(Optional)</p>
+							<input type="text" class="form-control" name="f_photo" placeholder="Image URL" required>
+							<div class="invalid-feedback">
+								Please provide image url of the person you are reporting. 
+							</div>
+						</div>
+					</div>
 					
 					<div class="form-row">
 						<div class="col-md-6 mb-3">
@@ -167,6 +177,30 @@
 
 					<button class="btn btn-primary btn-block bg-info mb-3" type="submit">Submit form</button>
 				</form>
+
+
+				<script>
+				// Example starter JavaScript for disabling form submissions if there are invalid fields
+				(function() {
+				  'use strict';
+				  window.addEventListener('load', function() {
+				    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+				    var forms = document.getElementsByClassName('needs-validation');
+				    // Loop over them and prevent submission
+				    var validation = Array.prototype.filter.call(forms, function(form) {
+				      form.addEventListener('submit', function(event) {
+				        if (form.checkValidity() === false) {
+				          event.preventDefault();
+				          event.stopPropagation();
+				        }
+				        form.classList.add('was-validated');
+				      }, false);
+				    });
+				  }, false);
+				})();
+				</script>
+
+
 			</div>
 		</div>
 	</div>
