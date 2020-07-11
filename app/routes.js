@@ -64,8 +64,8 @@ router.post('/reportMissing', function(req, res){
     console.log("Missing person saved successfully");
   });
 
-  req.flash('success', 'Missing person has been successfully added to the database \n Your reference ID is' + 
-              report.reporter_ID +' \n .this should be used for cancelling your reported person' );
+  req.flash('success', 'Missing person has been successfully added to the database \n Your reference ID is ' + 
+              report.reporter_ID +' \n .This should be used for cancelling your reported person' );
   res.redirect('/report');
 
 });
