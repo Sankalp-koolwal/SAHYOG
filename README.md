@@ -11,10 +11,13 @@ A web application which helps to **manage** natural disasters. Predominantly, it
 ## UI 
 ![Home](https://github.com/Sankalp-koolwal/SAHYOG/blob/master/Screenshots/Home.png)
 `Page 1 of 4
+
 ![Report](https://github.com/Sankalp-koolwal/SAHYOG/blob/master/Screenshots/report.png)
 `Page 2 of 4
+
 ![Find](https://github.com/Sankalp-koolwal/SAHYOG/blob/master/Screenshots/find.png)
 `Page 3 of 4
+
 ![Guide](https://github.com/Sankalp-koolwal/SAHYOG/blob/master/Screenshots/guide.png)
 `Page 4 of 4
 
