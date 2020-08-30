@@ -8,6 +8,17 @@ A web application which helps to **manage** natural disasters. Predominantly, it
 * HTML5, CSS, Node.js
 * MongoDB
 
+## Installation and Set Up
+- Fork/Clone the repository locally
+- Install nodejs and NPM from [here](https://nodejs.org/en/download/package-manager/)
+- Install and setup Mongodb from [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+- Run the following commands
+```bash
+cd /path-to-folder/
+npm install
+npm start (make sure mongodb is up and running)
+```
+
 ## UI 
 ![Home](https://github.com/Sankalp-koolwal/SAHYOG/blob/master/Screenshots/Home.png)
 `Page 1 of 4
